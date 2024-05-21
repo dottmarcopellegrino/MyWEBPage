@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulente Business - EPM e Financial Planning</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            background-color: #FF9800; /* Arancione */
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+        .services button {
+            background-color: #FF9800; /* Arancione */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .services button:hover {
+            background-color: #e68900;
+        }
+        footer {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("nav a").click(function(event){
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).attr("href")).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Consulente Business - EPM e Financial Planning</h1>
+</header>
+
+<nav>
+    <a href="#chi-sono">Chi Sono</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#contatti">Contatti</a>
+</nav>
+
+<div class="container">
+    <section id="chi-sono">
+        <h2>Chi Sono</h2>
+        <p>Sono un consulente business specializzato in Enterprise Performance Management (EPM) e Financial Planning. Con anni di esperienza nel settore, aiuto le aziende a migliorare la loro performance finanziaria attraverso soluzioni strategiche e personalizzate.</p>
+    </section>
+
+    <section id="servizi">
+        <h2>Servizi</h2>
+        <div class="services">
+            <button onclick="location.href='#service1'">Servizio 1</button>
+            <button onclick="location.href='#service2'">Servizio 2</button>
+            <button onclick="location.href='#service3'">Servizio 3</button>
+            <!-- Aggiungi altri servizi se necessario -->
+        </div>
+    </section>
+
+    <section id="contatti">
+        <h2>Contatti</h2>
+        <p>Per maggiori informazioni, visita il mio <a href="https://www.linkedin.com">LinkedIn</a>.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Consulente Business - EPM e Financial Planning. Tutti i diritti riservati.</p>
+</footer>
+
+</body>
+</html>
